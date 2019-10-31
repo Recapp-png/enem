@@ -1,0 +1,28 @@
+<?php
+
+require_once'CLASSES/usuarios.php';
+$u=new Usuário
+?>
+
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Projeto Login</title>
+	<link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+<div id="corpo-form-cad">
+	<h1>Cadastrar</h1>
+	<form method="POST" action="usuarios.php">
+		<input type="text" name="nome" placeholder="Nome Completo" maxlength="40">
+		<input type="text" name="telefone" placeholder="Telefone" maxlength="35">
+			<input type="email" name="email" placeholder="Usuário" maxlength="40">
+			<input type="password" name="senha" placeholder="senha" maxlength="15">
+			<input type="password" name="confSenha" placeholder="Confirmar Senha">
+			<input type="submit" value="Cadastre">
+		</form>
+</div>
+
+</body>
+</html>
