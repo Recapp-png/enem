@@ -24,13 +24,13 @@ $u=new Usuário
 		</form>
 </div>
 <?php
-isset($_POST['nome']){
+if(isset($_POST['nome'])){
  $nome=addslashes($_POST['nome']);
  $telefone= addslashes($_POST['telefone']);
  $email= addslashes($_POST['email']);
  $senha= addslashes($_POST['senha']);
  $confirmarSenha= addslashes($_POST['confSenha']);
- if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha]))
+ if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha))
  {
  $u->conectar("projeto_login","localhost","root","");
  if( $u->msgErro==""){
@@ -46,13 +46,12 @@ isset($_POST['nome']){
 echo"Senha e confirmar senha são incompatíveis"; 
  }
  }else{
- echo="Erro:".$u->msgErro;
+ echo "Erro:".$u->msgErro;
  }
  }
  }else{
   echo"Preencha os campos que faltam!";
  }
-}
 ?>
 </body>
 </html>
